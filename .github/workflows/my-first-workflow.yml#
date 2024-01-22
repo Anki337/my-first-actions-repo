@@ -1,0 +1,11 @@
+#Ge ett namn till workflowet.
+name: My first Workflow
+on: workflow_dispatch #dispatch = det som anger att det är manuell trigger till workflowet t.ex knapptryck.
+jobs: 
+    my-first-job: #namnet på mitt job, Detta bestämmer utvecklaren vad dem skall heta.
+      runs-on: 	ubuntu-latest #https://docs.github.com/en/actions/using-jobs/choosing-the-runner-for-a-job, Kolla "OS (YAML workflow label)" delen för GitHub hostade VMs.
+      steps:
+        - name: Print Greetings #Namnet på vårt steg
+          run: echo "Hello World" #run: <- betyder att vi gör ett command, I detta fallet "echo "hello, world"" eftersom VM är linux-os.
+        - name: Print Goodbyes
+          run: echo "Goodbye!"
